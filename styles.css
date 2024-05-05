@@ -1,0 +1,238 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global Styles */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  /* Setting font-family */
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://www.reviewstudio.com/wp-content/uploads/2021/04/Header-image-optimize-to-do-list-scaled.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-size: cover;
+}
+
+/* Container Styles */
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h1 {
+  text-align: center;
+}
+
+/* Input Field Styles */
+input[type="text"] {
+  width: 96%;
+  /* Setting width of input field */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Add Button Styles */
+.add {
+  background-color: #55b658;
+  color: white;
+  padding: 10px 20px;
+  width: 100%;
+  /* Full width */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  /* Spacing */
+  border: 1px solid rgb(255, 255, 255);
+}
+
+/* Add Button Hover Styles */
+.add:hover {
+  background: transparent;
+  color: green;
+  -webkit-transition: all ease-in .2s;
+  -o-transition: all ease-in .2s;
+  transition: all ease-in .2s;
+  border: 1px solid green;
+}
+
+/* Task List Styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Task Item Styles */
+li {
+  margin-bottom: 5px;
+  /* Spacing between list items */
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Delete Button Styles */
+.delete-button {
+  position: absolute;
+  right: 10px;
+  top: 25%;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.delete-button:hover {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+/* Responsive Warning Styles */
+.alert {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  z-index: 999;
+  text-align: center;
+}
+
+/* Media Query for smaller devices */
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 90%;
+    margin: 20px 20px;
+  }
+
+  #newTaskText {
+    width: 87%;
+  }
+
+}
+
+/* Edit Button Styles */
+.edit-button {
+  position: absolute;
+  right: 40px;
+  top: 25%;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+
+.edit-button:hover {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+
+/* Styles for the edit prompt */
+.promt_update {
+  display: none;
+  /* Initially hide the prompt */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 15px 20px;
+  border-radius: 10px;
+  z-index: 50;
+  -webkit-box-shadow: 2px 2px 5px #4f4f4f;
+  box-shadow: 2px 2px 5px #4f4f4f;
+}
+
+.edit-h4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.submitEdit {
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid green;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+
+.submitEdit:hover {
+  background-color: transparent;
+  color: rgb(13, 255, 0);
+  border: 1px solid rgb(13, 255, 0);
+  border-radius: 10px;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+  transition: .3s ease-in;
+  justify-items: center;
+  cursor: pointer;
+}
+
+.cancelEdit {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+
+.cancelEdit:hover {
+  background-color: transparent;
+  color: rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+  padding: 5px 10px;
+  border-radius: 10px;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+  transition: .3s ease-in;
+  cursor: pointer;
+}
+
+#newTaskText {
+  max-width: 97%;
+}

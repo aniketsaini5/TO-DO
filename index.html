@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.ico" type="image/icon">
+</head>
+
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Add a new task">
+
+    <!-- Add Task Button -->
+    <button class="add" onclick="addTask()">Add Task</button>
+
+    <!-- Task List -->
+    <ul id="taskList"></ul>
+
+    <!-- Responsive Warning Message -->
+    <div id="alert" class="alert"></div>
+
+    <!-- Prompt for editing task -->
+    <div class="promt_update" id="promt_update">
+      <h4 class="edit-h4">📃 Edit Task</h4>
+      <input type="text" id="newTaskText" placeholder="Enter new task text">
+      <button class="submitEdit" onclick="submitEdit()">Update</button>
+      <button class="cancelEdit" onclick="cancelEdit()">Cancel</button>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
